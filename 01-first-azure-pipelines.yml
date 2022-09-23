@@ -9,4 +9,11 @@ steps:
   displayName: 'Display System Directory'
 - script: echo SourcesDirectory Directory $(Build.SourcesDirectory)
   displayName: 'Display SourcesDirectory Directory'  
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(System.DafaultWorkingDirectory)'
+    Contents: |
+      **/*.yaml
+      **/*.tf
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
   
