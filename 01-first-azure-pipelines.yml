@@ -1,13 +1,20 @@
 trigger:
 - main
 
+strategy:
+  matrix:
+    linux:
+      operatingSystem: 'ubuntu-latest'
+    mac:
+      operatingSystem: 'macos-latest'  
+
 pool:
-  vmImage: ubuntu-latest
+  vmImage: $(operatingSystem)
 
 steps:
-- script: echo System Directory $(System.DefaultWorkingDirectory)
+- script: echo 'System Directory'+ $(operatingSystem)+ $(System.DefaultWorkingDirectory) 
   displayName: 'Display System Directory'
-- script: echo SourcesDirectory Directory $(Build.SourcesDirectory)
+- script: echo 'SourcesDirectory Directory'+ $(operatingSystem)+ $(Build.SourcesDirectory)
   displayName: 'Display SourcesDirectory Directory'  
 - task: CopyFiles@2
   inputs:
