@@ -5,7 +5,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-# - script: echo $(System.DefaultWorkingDirectory)
-#   displayName: 'Display System Directory'
-- script: echo $(Build.ArtifactStagingDirectory)
+- script: echo System Directory $(System.DefaultWorkingDirectory)
+  displayName: 'Display System Directory'
+- script: echo Artifact Directory $(Build.ArtifactStagingDirectory)
   displayName: 'Display Artifact Staging Directory'  
