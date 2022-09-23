@@ -9,5 +9,5 @@ steps:
   displayName: 'Display System Directory'
 - script: echo Artifact Directory $(Build.ArtifactStagingDirectory)
   displayName: 'Display Artifact Staging Directory'  
-- script: echo Source Directory $(Build.SourceDirectory)
-  displayName: 'Display Artifact Staging Directory'    
+- script: echo Source Directory $(Systems.SourceDirectory)
+  displayName: 'Display Source Directory'    
