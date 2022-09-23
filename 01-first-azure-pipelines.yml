@@ -11,7 +11,7 @@ steps:
   displayName: 'Display SourcesDirectory Directory'  
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(System.DafaultWorkingDirectory)'
+    SourceFolder: '$(System.DefaultWorkingDirectory)'
     Contents: |
       **/*.yaml
       **/*.tf
