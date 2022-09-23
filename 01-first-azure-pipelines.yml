@@ -7,7 +7,6 @@ pool:
 steps:
 - script: echo System Directory $(System.DefaultWorkingDirectory)
   displayName: 'Display System Directory'
-- script: echo Artifact Directory $(Build.SourcesDirectory)
-  displayName: 'Display Artifact Staging Directory'  
-- script: echo Source Directory $(System.SourceDirectory)
-  displayName: 'Display Source Directory'    
+- script: echo SourcesDirectory Directory $(Build.SourcesDirectory)
+  displayName: 'Display SourcesDirectory Directory'  
+  
